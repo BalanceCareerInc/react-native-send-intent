@@ -88,7 +88,7 @@ var SendIntentAndroid = {
     openAppWithData(packageName, dataUri, mimeType, extras) {
         return RNSendIntentAndroid.openAppWithData(packageName, dataUri, mimeType, extras || {});
     },
-    openAppWithUri(intentUri) {
+    openAppWithUri(intentUri, extras) {
         return RNSendIntentAndroid.openAppWithUri(intentUri, extras || {});
     },
     openFileChooser(options, title) {
