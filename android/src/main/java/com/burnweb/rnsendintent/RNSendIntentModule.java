@@ -583,7 +583,7 @@ public class RNSendIntentModule extends ReactContextBaseJavaModule {
     public void openAppWithUri(String intentUri, ReadableMap extras, final Promise promise) {
         try {
             Intent intent = Intent.parseUri(intentUri, Intent.URI_INTENT_SCHEME);
-            Intent existPackage = getPackageManager().getLaunchIntentForPackage(intent.getPackage());
+            Intent existPackage = this.reactContext.getPackageManager().getLaunchIntentForPackage(intent.getPackage());
             if (existPackage != null) {
                 this.reactContext.startActivity(intent);
             } else {
